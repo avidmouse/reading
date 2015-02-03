@@ -24,15 +24,13 @@
 > * 于其他静态方法没有区别
 
 如果使用scala, 因为支持apply, 可以很好的避免这两个缺点, 如:
-```
-#!scala
+```scala
 object Map {
   def apply(kv: Tuple*): Map = new HashMap(kv)
 }
 ```
 调用时:
-```
-#!scala
+```scala
 Map("China" -> "Beijing", "US" -> "Washington D.C")
 ```
 
@@ -40,15 +38,13 @@ Map("China" -> "Beijing", "US" -> "Washington D.C")
 
 因为scala 支持 Named and Default Arguments, 相当于语言级支持了该条目内容,如:
 
-```
-#!scala
+```scala
 class Student(name: String, age: Int = 8, gender: Int = 0)
 ```
 
 调用时:
 
-```
-#!scala
+```scala
 val xiaoming = new Student("Xiaoming", 8)
 val leilei = new Student("Leilei", gender = 1)
 ```
@@ -59,8 +55,7 @@ val leilei = new Student("Leilei", gender = 1)
 这两条内容可以参考Singlenton设计模式.
 在scala中, Singlenton是语言级支持的, 如:
 
-```
-#!scala
+```scala
 object Elvis {
   def leaveTheBuilding()
 }
@@ -104,8 +99,7 @@ public class Object {
 在scala中,有两种情况,
 #### 1. case class
 当定义class为case class 时, 编译器会帮我们override equals, hashCode, toString, 如:
-```
-#!scala
+```scala
 case class Cat(name: String, age: Int)
 ```
 
@@ -115,8 +109,7 @@ case class Cat(name: String, age: Int)
 
 #### 2. class
 这种情况下, 和java class 是一致的,需要自己override equals, hashCode, 如:
-```
-#!scala
+```scala
 class Cat(name: String, age: Int) {
   
 }
