@@ -118,7 +118,10 @@ public class Object {
 #### 1. case class
 
 当定义class为case class 时, 编译器会帮我们override equals, hashCode, toString, 如:
+<<<<<<< HEAD
 
+=======
+>>>>>>> 62be6626890b2967de42388548c2ab98a15e041a
 ```scala
 case class Cat(name: String, age: Int)
 ```
@@ -128,10 +131,14 @@ case class Cat(name: String, age: Int)
 一般情况下, 使用case class 是最好的选择
 
 #### 2. class
+<<<<<<< HEAD
 
 这种情况下, 和java class 是一致的,需要自己override equals, hashCode.
 如:
 
+=======
+这种情况下, 和java class 是一致的,需要自己override equals, hashCode, 如:
+>>>>>>> 62be6626890b2967de42388548c2ab98a15e041a
 ```scala
 class Cat(name: String, age: Int) {
   override def equals(other: Any): Boolean = 
